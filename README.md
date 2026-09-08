@@ -62,6 +62,36 @@ COF 是由有机构筑单元通过共价键形成的晶态多孔网络。连接�
 
 `data/cof_demo.csv` 只用于 01A–01B 的低门槛教学体验，其中 `CO2_uptake_demo` 为人工 target，不能用于科研结论。
 
+## 真实 COF 数据集
+
+| 数据源 | 内容 | 教学用途 |
+|---|---|---|
+| [CURATED-COFs](https://github.com/danieleongari/CURATED-COFs) + [Materials Cloud](https://archive.materialscloud.org/record/2021.100) | 实验报道 COF、优化结构、孔性质、CO₂/N₂ adsorption 数据 | CIF ↔ ID ↔ property、small-data ML、carbon capture |
+| [COFSpace](https://github.com/gokhanonderaksu/COFSpace) | 1060 CoRE COFs 的 CO₂/CH₄/H₂/N₂/O₂ 模拟 adsorption、结构/化学/能量 features；另含 hypothetical COF predictions | 多气体/多压力 regression、feature importance、external prediction |
+| [ReDD-COFFEE](https://github.com/jsdvos/SupportingInformation_ReDD-COFFEE_2023) | 大规模 hypothetical COF、pore geometry 与 RAC descriptors | representation、diversity、large chemical space |
+| [CO₂ capture HTS](https://github.com/jsdvos/SupportingInformation_CO2captureHTS_2024) | ReDD-COFFEE 的 features、GCMC results、固定 train/test split、ML 与 SHAP | high-throughput screening、feature reduction、interpretability |
+| [Hypothetical COFs for methane storage](https://www.materialscloud.org/discover/cofs) | 69,840 个 hypothetical 2D/3D COF 与 GCMC methane deliverable capacity | 大规模 screening、structure–property relationship |
+
+04A 补回第二套吸附数据实验，04B 恢复 CIF 到表格的完整实践，04C 连接筛选机制与公开 results/predictions。不同来源先分别建立数据卡，再讨论能否合并。
+
+
+可直接读取的补充表：[nachatz/cof-data](https://github.com/nachatz/cof-data) · [properties.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/properties.csv) · [simple_features.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/simple_features.csv)
+
+## 按章节扩展阅读
+
+| 章节 | 资源 | 阅读目的 |
+|---|---|---|
+| 01–04 | [Machine Learning for Materials](https://aronwalsh.github.io/MLforMaterials/) | 材料 ML 全局路线 |
+| 02A / 04B | [pymatgen](https://pymatgen.org/) | 晶胞、CIF 与 PBC |
+| 02B | [matminer](https://hackingmaterials.lbl.gov/matminer/) | 组成与结构描述符 |
+| 05 | [JARVIS notebooks](https://github.com/atomgptlab/jarvis-tools-notebooks) | 材料图与 notebook 示例 |
+| 05–06 | [MatGL tutorials](https://matgl.ai/tutorials.html) | 图模型与材料势 |
+| 06 | [CHGNet](https://github.com/CederGroupHub/chgnet) | 预训练势与验证 |
+| 05 | [ALIGNN](https://github.com/usnistgov/alignn) | 原子与键角图 |
+| 03B | [Matbench](https://github.com/materialsproject/matbench) | 可比较的 benchmark |
+
+[数据入口与使用约定](docs/data_resources.md)。科研使用请引用原论文和数据记录，并保存版本、单位、条件及划分。
+
 ## 作者与联系
 
 **教程开发:** [Wanteen](https://github.com/Wanteen)  
