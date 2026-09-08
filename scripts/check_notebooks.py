@@ -11,19 +11,19 @@ from urllib.parse import unquote
 
 ROOT = Path(__file__).resolve().parents[1]
 IDS = {
-    '01_python_ml_basics': '01A',
-    '02_first_ml_regression_classification': '01B',
-    '03_cof_structure_cif': '02A',
-    '04_cof_descriptors': '02B',
-    '05_data_preparation_feature_engineering': '02C',
-    '06_model_comparison': '03A',
-    '07_validation_tuning': '03B',
-    '08_feature_importance_interpretation': '03C',
-    '09_real_cof_ml_case_study': '04A',
-    '10_real_cif_to_ml': '04B',
-    '11_high_throughput_screening': '04C',
-    '12_gnn_for_cofs': '05',
-    '13_mlff': '06',
+    '01A_python_ml_basics': '01A',
+    '01B_first_ml_regression_classification': '01B',
+    '02A_cof_structure_cif': '02A',
+    '02B_cof_descriptors': '02B',
+    '02C_data_preparation_feature_engineering': '02C',
+    '03A_model_comparison': '03A',
+    '03B_validation_tuning': '03B',
+    '03C_feature_importance_interpretation': '03C',
+    '04A_real_cof_ml_case_study': '04A',
+    '04B_real_cif_to_ml': '04B',
+    '04C_high_throughput_screening': '04C',
+    '05_gnn_for_cofs': '05',
+    '06_mlff': '06',
 }
 errors = []
 notebooks = sorted(ROOT.glob('notebooks/**/*.ipynb'))
@@ -36,8 +36,8 @@ for path in notebooks:
         heading = ''.join(nb['cells'][0]['source'])
         if not heading.startswith('# ' + IDS[path.stem] + ' '):
             errors.append(f'{path}: course ID changed')
-        level = 'C' if path.stem == '13_mlff' else 'B' if path.stem in {
-            '10_real_cif_to_ml', '11_high_throughput_screening', '12_gnn_for_cofs'
+        level = 'C' if path.stem == '06_mlff' else 'B' if path.stem in {
+            '04B_real_cif_to_ml', '04C_high_throughput_screening', '05_gnn_for_cofs'
         } else 'A'
         if 'Level ' + level not in heading:
             errors.append(f'{path}: mastery level changed')

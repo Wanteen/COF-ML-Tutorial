@@ -10,26 +10,34 @@
 
 Short tutorials are grouped by **knowledge density and difficulty**. Tutorials inside one knowledge block use A/B/C numbering instead of consuming a full chapter number.
 
+## Quick start
+
+1. Open the [Chinese Colab launcher](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb) or [English Colab launcher](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/00_start_here_colab.ipynb); no local installation is needed.
+2. Read the [course map](notebooks/en/00_course_map.ipynb), then complete **01A → 01B** for your first regression and classification models.
+3. Connect a runtime and run cells from top to bottom. Each lesson in the table has separate Chinese and English Colab links.
+4. Continue with **02A–02C → 03A–03C → 04A**; 04B–04C and 05 are recommended extensions, and 06 is optional background.
+5. See the [bilingual notebook index](notebooks/README.md) for all lessons. Notebook filenames and titles use the same course IDs as the tables.
+
 ## Mastery levels
 - 🟢 **Level A · Must master**
 - 🔵 **Level B · Recommended**
 - 🟣 **Level C · Awareness only**
 
-| Course ID | Level | Topic |
-|---|---|---|
-| 01A | 🟢 | Python & data basics |
-| 01B | 🟢 | First regression + classification |
-| 02A | 🟢 | COF structure & CIF |
-| 02B | 🟢 | COF descriptors |
-| 02C | 🟢 | Data preparation & feature engineering |
-| 03A | 🟢 | Multi-model comparison |
-| 03B | 🟢 | Validation & tuning |
-| 03C | 🟢 | Feature importance & interpretation |
-| 04A | 🟢 | Real COF ML case study |
-| 04B | 🔵 | Real CIF → ML |
-| 04C | 🔵 | High-throughput screening |
-| 05 | 🔵 | GNN |
-| 06 | 🟣 | MLFF |
+| Course ID | Level | Topic | Notebook | 中文 Colab | English Colab |
+|---|---|---|---|---|---|
+| 01A | 🟢 | Python & data basics | [中文](notebooks/01A_python_ml_basics.ipynb) / [English](notebooks/en/01A_python_ml_basics.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01A_python_ml_basics.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/01A_python_ml_basics.ipynb) |
+| 01B | 🟢 | First regression + classification | [中文](notebooks/01B_first_ml_regression_classification.ipynb) / [English](notebooks/en/01B_first_ml_regression_classification.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01B_first_ml_regression_classification.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/01B_first_ml_regression_classification.ipynb) |
+| 02A | 🟢 | COF structure & CIF | [中文](notebooks/02A_cof_structure_cif.ipynb) / [English](notebooks/en/02A_cof_structure_cif.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02A_cof_structure_cif.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02A_cof_structure_cif.ipynb) |
+| 02B | 🟢 | COF descriptors | [中文](notebooks/02B_cof_descriptors.ipynb) / [English](notebooks/en/02B_cof_descriptors.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02B_cof_descriptors.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02B_cof_descriptors.ipynb) |
+| 02C | 🟢 | Data preparation & feature engineering | [中文](notebooks/02C_data_preparation_feature_engineering.ipynb) / [English](notebooks/en/02C_data_preparation_feature_engineering.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02C_data_preparation_feature_engineering.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02C_data_preparation_feature_engineering.ipynb) |
+| 03A | 🟢 | Multi-model comparison | [中文](notebooks/03A_model_comparison.ipynb) / [English](notebooks/en/03A_model_comparison.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03A_model_comparison.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03A_model_comparison.ipynb) |
+| 03B | 🟢 | Validation & tuning | [中文](notebooks/03B_validation_tuning.ipynb) / [English](notebooks/en/03B_validation_tuning.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03B_validation_tuning.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03B_validation_tuning.ipynb) |
+| 03C | 🟢 | Feature importance & interpretation | [中文](notebooks/03C_feature_importance_interpretation.ipynb) / [English](notebooks/en/03C_feature_importance_interpretation.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03C_feature_importance_interpretation.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03C_feature_importance_interpretation.ipynb) |
+| 04A | 🟢 | Real COF ML case study | [中文](notebooks/04A_real_cof_ml_case_study.ipynb) / [English](notebooks/en/04A_real_cof_ml_case_study.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04A_real_cof_ml_case_study.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04A_real_cof_ml_case_study.ipynb) |
+| 04B | 🔵 | Real CIF → ML | [中文](notebooks/04B_real_cif_to_ml.ipynb) / [English](notebooks/en/04B_real_cif_to_ml.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04B_real_cif_to_ml.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04B_real_cif_to_ml.ipynb) |
+| 04C | 🔵 | High-throughput screening | [中文](notebooks/04C_high_throughput_screening.ipynb) / [English](notebooks/en/04C_high_throughput_screening.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04C_high_throughput_screening.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04C_high_throughput_screening.ipynb) |
+| 05 | 🔵 | GNN | [中文](notebooks/05_gnn_for_cofs.ipynb) / [English](notebooks/en/05_gnn_for_cofs.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05_gnn_for_cofs.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05_gnn_for_cofs.ipynb) |
+| 06 | 🟣 | MLFF | [中文](notebooks/06_mlff.ipynb) / [English](notebooks/en/06_mlff.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/06_mlff.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/06_mlff.ipynb) |
 
 Milestones: finish 01 for your first successful ML loop; 02 for ML-ready materials data; 03 for trustworthy model comparison and interpretation; 04 for a complete real COF workflow.
 
