@@ -1,31 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="900" height="520" viewBox="0 0 900 520">
-<rect width="900" height="520" rx="28" fill="#f7fbff"/>
-<defs>
-  <filter id="s" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-opacity="0.12"/></filter>
-</defs>
-<g filter="url(#s)">
-  <rect x="38" y="38" width="824" height="444" rx="24" fill="#ffffff"/>
+<rect width="900" height="520" rx="28" fill="#f7fbff"/><rect x="38" y="38" width="824" height="444" rx="24" fill="#fff" stroke="#dbeafe" stroke-width="2"/>
+<text x="74" y="92" font-family="Arial,sans-serif" font-size="30" font-weight="700" fill="#1f3b5b">2D COF: hexagonal pore</text>
+<text x="74" y="124" font-family="Arial,sans-serif" font-size="17" fill="#60758a">simplified topology schematic • one pore shown for clarity</text>
+<g transform="translate(170,150)" stroke="#52677a" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+<path d="M180 20 L330 105 L330 275 L180 360 L30 275 L30 105 Z"/>
 </g>
-<text x="74" y="92" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#1f3b5b">2D COF: hexagonal pore network</text>
-<text x="74" y="124" font-family="Arial, sans-serif" font-size="17" fill="#60758a">schematic teaching illustration • not a specific experimental structure</text>
-<g transform="translate(165,165)" stroke="#596b7a" stroke-width="7" stroke-linecap="round">
-  <line x1="100" y1="0" x2="200" y2="58"/><line x1="200" y1="58" x2="200" y2="174"/><line x1="200" y1="174" x2="100" y2="232"/><line x1="100" y1="232" x2="0" y2="174"/><line x1="0" y1="174" x2="0" y2="58"/><line x1="0" y1="58" x2="100" y2="0"/>
-  <line x1="200" y1="58" x2="300" y2="0"/><line x1="300" y1="0" x2="400" y2="58"/><line x1="400" y1="58" x2="400" y2="174"/><line x1="400" y1="174" x2="300" y2="232"/><line x1="300" y1="232" x2="200" y2="174"/>
-  <line x1="0" y1="174" x2="-100" y2="232"/><line x1="-100" y1="232" x2="0" y2="290"/><line x1="0" y1="290" x2="100" y2="232"/>
-  <line x1="400" y1="174" x2="500" y2="232"/><line x1="500" y1="232" x2="400" y2="290"/><line x1="400" y1="290" x2="300" y2="232"/>
+<g fill="#7c3aed" stroke="#fff" stroke-width="5">
+<circle cx="350" cy="170" r="20"/><circle cx="500" cy="255" r="20"/><circle cx="500" cy="425" r="20"/><circle cx="350" cy="510" r="20" transform="translate(0,-20)"/><circle cx="200" cy="425" r="20"/><circle cx="200" cy="255" r="20"/>
 </g>
-<g fill="#7c3aed" stroke="#ffffff" stroke-width="5">
-  <circle cx="265" cy="165" r="18"/><circle cx="365" cy="223" r="18"/><circle cx="365" cy="339" r="18"/><circle cx="265" cy="397" r="18"/><circle cx="165" cy="339" r="18"/><circle cx="165" cy="223" r="18"/>
-  <circle cx="565" cy="165" r="18"/><circle cx="665" cy="223" r="18"/><circle cx="665" cy="339" r="18"/><circle cx="565" cy="397" r="18"/>
+<g fill="#10b981" stroke="#fff" stroke-width="4">
+<circle cx="425" cy="212.5" r="14"/><circle cx="500" cy="340" r="14"/><circle cx="425" cy="447.5" r="14"/><circle cx="275" cy="447.5" r="14"/><circle cx="200" cy="340" r="14"/><circle cx="275" cy="212.5" r="14"/>
 </g>
-<g fill="#10b981" stroke="#ffffff" stroke-width="5">
-  <circle cx="315" cy="194" r="13"/><circle cx="365" cy="281" r="13"/><circle cx="315" cy="368" r="13"/><circle cx="215" cy="368" r="13"/><circle cx="165" cy="281" r="13"/><circle cx="215" cy="194" r="13"/>
-  <circle cx="515" cy="194" r="13"/><circle cx="565" cy="281" r="13"/><circle cx="515" cy="368" r="13"/>
-</g>
-<circle cx="265" cy="281" r="58" fill="#dbeafe" opacity="0.95" stroke="#60a5fa" stroke-width="4" stroke-dasharray="8 8"/>
-<text x="232" y="289" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#2563eb">PORE</text>
-<g font-family="Arial, sans-serif" font-size="16" fill="#374151">
-  <circle cx="735" cy="392" r="9" fill="#7c3aed"/><text x="754" y="398">node</text>
-  <circle cx="735" cy="426" r="9" fill="#10b981"/><text x="754" y="432">linker site</text>
-</g>
+<ellipse cx="350" cy="340" rx="95" ry="88" fill="#dbeafe" opacity=".8" stroke="#60a5fa" stroke-width="4" stroke-dasharray="9 8"/>
+<text x="317" y="348" font-family="Arial,sans-serif" font-size="19" font-weight="700" fill="#2563eb">PORE</text>
+<g font-family="Arial,sans-serif" font-size="17" fill="#374151"><circle cx="650" cy="260" r="10" fill="#7c3aed"/><text x="674" y="266">node</text><circle cx="650" cy="302" r="10" fill="#10b981"/><text x="674" y="308">linker segment</text><text x="620" y="360" fill="#60758a">Periodic repetition of this</text><text x="620" y="384" fill="#60758a">motif forms the 2D network.</text></g>
 </svg>
