@@ -68,14 +68,14 @@ flowchart LR
 
 对于 COF，真正困难的通常不是调用算法，而是输入是否包含孔径、孔隙率、化学组成、官能团、拓扑、层间堆积等重要信息；target 是否来自一致条件；以及 train/test 是否真正代表“已知”和“未知”材料。
 
-## 🖼️ COF 结构视觉素材
+## 🖼️ COF 结构示意
 
 <p align="center">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20chemical%20structure%20of%20the%20DAAQ-TFP%20covalent%20organic%20framework.png" width="320" alt="DAAQ-TFP COF">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20chemical%20structure%20of%20the%20TpOMe-DAQ%20covalent%20organic%20framework.png" width="320" alt="TpOMe-DAQ COF">
+  <img src="assets/cof_hexagonal.svg" width="420" alt="Hexagonal COF pore network">
+  <img src="assets/cof_layered.svg" width="420" alt="Layered COF stacking and transport">
 </p>
 
-<p align="center"><sub>示意结构：DAAQ-TFP 与 TpOMe-DAQ COFs。Images by Tyran Gunther (UU), Wikimedia Commons, CC BY-SA 4.0. 详见 <a href="docs/visual_resources.md">Visual resources & attribution</a>.</sub></p>
+<p align="center"><sub>仓库内置教学示意图：左图展示二维六方孔道网络，右图展示层间堆积与孔道输运。它们用于解释 COF 的 pore、stacking 与 transport 概念，不对应某一个具体实验结构。</sub></p>
 
 ## 🗓️ 推荐学习顺序
 
