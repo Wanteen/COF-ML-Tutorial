@@ -1,6 +1,6 @@
 # 📚 Notebook index / 课程索引
 
-[🇨🇳 中文主页](../README.md) · [🇬🇧 English home](../README.en.md) · [教学审计 / Audit](../docs/tutorial_audit_2026-09.md)
+[🇨🇳 中文主页](../README.md) · [🇬🇧 English home](../README.en.md)
 
 | Chapter | 中文 | English | 中文 Colab | English Colab |
 |---|---|---|---|---|
@@ -10,11 +10,10 @@
 | 03 Descriptors | [打开](03_material_descriptors.ipynb) | [Open](en/03_material_descriptors.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03_material_descriptors.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03_material_descriptors.ipynb) |
 | 04 Real COF data | [打开](04_real_cof_dataset.ipynb) | [Open](en/04_real_cof_dataset.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04_real_cof_dataset.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04_real_cof_dataset.ipynb) |
 | 05 Property prediction | [打开](05_cof_property_prediction.ipynb) | [Open](en/05_cof_property_prediction.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05_cof_property_prediction.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05_cof_property_prediction.ipynb) |
-| **05B Real CIF → ML** | **[打开](05B_real_cof_cif_to_ml.ipynb)** | **[Open](en/05B_real_cof_cif_to_ml.ipynb)** | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05B_real_cof_cif_to_ml.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05B_real_cof_cif_to_ml.ipynb) |
-| **05C High-throughput screening** | **[打开](05C_high_throughput_screening.ipynb)** | **[Open](en/05C_high_throughput_screening.ipynb)** | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05C_high_throughput_screening.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05C_high_throughput_screening.ipynb) |
+| 05B Real CIF → ML | [打开](05B_real_cof_cif_to_ml.ipynb) | [Open](en/05B_real_cof_cif_to_ml.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05B_real_cof_cif_to_ml.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05B_real_cof_cif_to_ml.ipynb) |
+| 05C High-throughput screening | [打开](05C_high_throughput_screening.ipynb) | [Open](en/05C_high_throughput_screening.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05C_high_throughput_screening.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05C_high_throughput_screening.ipynb) |
+| **05D Real COF ML datasets** | [打开](05D_real_cof_ml_datasets.ipynb) | [Open](en/05D_real_cof_ml_datasets.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05D_real_cof_ml_datasets.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05D_real_cof_ml_datasets.ipynb) |
 | 06 GNN | [打开](06_gnn_for_materials.ipynb) | [Open](en/06_gnn_for_materials.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/06_gnn_for_materials.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/06_gnn_for_materials.ipynb) |
 | 07 MLFF | [打开](07_mlff_chgnet.ipynb) | [Open](en/07_mlff_chgnet.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/07_mlff_chgnet.ipynb) | [▶](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/07_mlff_chgnet.ipynb) |
 
-> 现在的主线不再把“会训练一个模型”视为完整 workflow。Level A 应完成 01–05C，并能解释 `CIF → descriptor → target → split → validation → screening → verification`。
-
-> 中文与 English 版本保持相同代码逻辑和章节层级；如发现两种语言内容不同步，以当前 GitHub `main` 分支为准。
+中文与 English 版本保持相同代码逻辑和章节层级；如发现两种语言内容不同步，以当前 GitHub `main` 分支为准。
