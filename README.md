@@ -1,114 +1,159 @@
 # COF-ML-Tutorial
 
-> 面向计算材料 / COF 方向新入学研究生的机器学习入门教程。  
-> **GitHub 直接阅读 + Google Colab 运行 + COF 真实数据实践。**
+> 面向 **COF / 计算材料方向新入学研究生** 的机器学习入门教程。  
+> **GitHub 阅读 + Google Colab 运行 + COF 数据实践。**
 
-本教程不以“尽快训练一个神经网络”为目标，而是建立一条可用于科研的路线：
+本教程不是机器学习专业课程，也不要求学生一开始就理解复杂模型。核心目标是：先建立最基本的数据与模型概念，再逐步连接到 COF 结构、描述符、性质预测和科研中的验证问题。
 
-**materials question → data → representation → baseline → validation → GNN / MLFF → scientific interpretation**
+## 课程定位
+
+这套教程适合：
+
+- 刚进入 COF / 计算材料课题组的研究生；
+- 没有系统学习过机器学习；
+- 能看懂基础 Python 代码，但不要求熟练编程；
+- 已具备基本 COF、化学键、晶胞、周期性结构、孔道/吸附等物理化学知识。
+
+### 前置要求
+
+**Python：** 能看懂变量、list/dict、函数调用、`for` 循环、`import`、DataFrame 等基本代码结构即可。不会独立写完整程序也可以。
+
+**COF / 材料基础：** 理解原子、分子、化学键、晶胞、周期性边界、孔道、密度等基本概念。教程不会重新讲有机化学或晶体学基础。
+
+**机器学习：** 不要求任何前置知识。
+
+## 学习层级
+
+本教程分为三层：
+
+### Level A — 必须掌握
+
+01–05 为主线内容。完成后应该能独立理解并运行一个简单的 COF 机器学习 workflow。
+
+### Level B — 建议了解
+
+06 图神经网络（GNN）。重点理解“原子图”和“message passing”是什么，不要求从头实现复杂网络。
+
+### Supplementary — 补充阅读
+
+07 机器学习势（MLFF）。只用于建立背景认识，不作为本教程核心考核内容，不要求掌握训练 CHGNet / MACE / DeepMD。
 
 ## Course map
 
-| Chapter | Topic | 你需要掌握什么 | GitHub | Colab |
-|---|---|---|---|---|
-| 00 | Course map | 建立材料 ML 全局认知 | [View](notebooks/00_course_map.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_course_map.ipynb) |
-| 01 | Python + ML | regression、split、metrics、overfitting | [View](notebooks/01_python_ml_basics.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01_python_ml_basics.ipynb) |
-| 02 | pymatgen | CIF、lattice、PBC、neighbors | [View](notebooks/02_pymatgen_structure.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02_pymatgen_structure.ipynb) |
-| 03 | Descriptors | composition / pore / chemistry / topology | [View](notebooks/03_material_descriptors.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03_material_descriptors.ipynb) |
-| 04 | Real COF data | 数据审计、缺失、重复、leakage | [View](notebooks/04_real_cof_dataset.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04_real_cof_dataset.ipynb) |
-| 05 | COF prediction | baseline、Pipeline、family-aware split | [View](notebooks/05_cof_property_prediction.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05_cof_property_prediction.ipynb) |
-| 06 | GNN | graph、message passing、cutoff | [View](notebooks/06_gnn_for_materials.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/06_gnn_for_materials.ipynb) |
-| 07 | MLFF | energy/force、pretrained potential、validation | [View](notebooks/07_mlff_chgnet.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/07_mlff_chgnet.ipynb) |
+| Chapter | Level | Topic | 主要问题 | GitHub | Colab |
+|---|---|---|---|---|---|
+| 00 | 导航 | Course map | 课程怎么学？需要什么基础？ | [View](notebooks/00_course_map.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_course_map.ipynb) |
+| 01 | A | ML 最小基础 | 数据、feature、target、train/test 是什么？ | [View](notebooks/01_python_ml_basics.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01_python_ml_basics.ipynb) |
+| 02 | A | 周期结构与 pymatgen | CIF、晶胞参数、分数坐标是什么？ | [View](notebooks/02_pymatgen_structure.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02_pymatgen_structure.ipynb) |
+| 03 | A | Descriptors | 如何把材料结构变成模型能读取的数字？ | [View](notebooks/03_material_descriptors.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03_material_descriptors.ipynb) |
+| 04 | A | Real COF data | 真实数据库为什么不能拿来就训练？ | [View](notebooks/04_real_cof_dataset.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04_real_cof_dataset.ipynb) |
+| 05 | A | COF prediction | 如何训练、评价并避免虚假高精度？ | [View](notebooks/05_cof_property_prediction.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05_cof_property_prediction.ipynb) |
+| 06 | B | GNN | 为什么可以直接从原子图学习？ | [View](notebooks/06_gnn_for_materials.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/06_gnn_for_materials.ipynb) |
+| 07 | Supplement | MLFF | 为什么需要机器学习势？它和 DFT/MD 有什么关系？ | [View](notebooks/07_mlff_chgnet.ipynb) | [Open](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/07_mlff_chgnet.ipynb) |
 
-## 推荐学习节奏
+## 推荐学习顺序
 
-**Week 1 — Python & supervised learning**  
-完成 00–01。重点不是语法，而是 feature/target、train/test、MAE/RMSE/R²、overfitting 和 data leakage。
+建议先完成 00–05，再决定是否继续 06。07 只作为补充阅读。
 
-**Week 2 — Materials structures**  
-完成 02。能用 pymatgen 读取 CIF，并理解 periodic structure 与普通分子表格数据的区别。
+- Week 1：00–01，理解数据、feature、target、模型、训练集和测试集。
+- Week 2：02，理解晶胞、周期性、CIF 和 pymatgen。
+- Week 3：03，理解“材料表示（representation）”与描述符。
+- Week 4：04，练习真实 COF 数据审计。
+- Week 5：05，完成完整 baseline 和可靠验证。
+- Week 6（可选）：06，了解 GNN。
+- Supplementary：07，了解 MLFF 背景。
 
-**Week 3 — Representation**  
-完成 03。理解为什么 composition descriptors 无法描述 COF 孔道、stacking 和 functional-group position。
+## 一个贯穿课程的核心问题
 
-**Week 4 — Real data**  
-完成 04。直接分析 [Wanteen/CURATED-COFs](https://github.com/Wanteen/CURATED-COFs)，完成数据审计。
+机器学习本质上需要把材料问题转化为：
 
-**Week 5 — Reliable prediction**  
-完成 05。比较 random split 与 family-aware split，开始建立“适用域”意识。
+`材料样本 → 可计算输入 X → 模型 → 预测 y → 与真实 y 比较`
 
-**Week 6 — GNN**  
-完成 06。理解 atomic graph 和 message passing，再运行成熟的 MatGL / ALIGNN 教程。
+对于 COF，真正困难的通常不是调用某个算法，而是：
 
-**Week 7–8 — MLFF**  
-完成 07。理解 energy/force learning、pretrained model 的适用域和 validation，再进入 CHGNet / MACE / DeepMD。
+- X 是否包含孔径、孔隙率、化学组成、官能团、拓扑、层间堆积等重要信息；
+- y 是否来自一致的实验/计算条件；
+- train/test 是否真的代表“已知材料”和“未知材料”；
+- 模型分数是否被重复结构或同家族结构泄漏人为抬高。
 
-## 为什么专门针对 COF？
+## 术语说明
 
-通用材料 ML 教程通常以无机晶体或小型 benchmark 为主。COF 还有一些必须单独考虑的问题：
+教程第一次出现重要术语时会同时给出中文解释。例如：
 
-- pore size、limiting pore diameter、surface area、void fraction；
+- feature：特征，模型输入的变量；
+- target / label：目标值 / 标签，要预测的性质；
+- model：模型，从输入到输出的数学映射；
+- training set：训练集，用于拟合模型；
+- test set：测试集，只用于评价未见数据上的表现；
+- descriptor：描述符，把材料结构/组成转化为数值特征；
+- data leakage：数据泄漏，测试信息以不合理方式进入训练过程。
+
+不要求第一次看到术语就记住；课程会在后续章节重复使用。
+
+## COF 为什么需要单独讲？
+
+COF 不只是“一个化学式”。不同任务可能依赖：
+
+- 晶胞参数 `a, b, c, α, β, γ`；
+- pore size / limiting pore diameter；
+- surface area / void fraction；
 - linker / node / linkage / topology；
-- functional-group identity 与位置；
-- 2D COF stacking、interlayer distance、slip；
+- functional group；
+- 2D stacking / interlayer distance / slip；
 - framework flexibility；
-- guest loading、hydration、temperature / pressure 等工作条件；
-- 同系列 COF 高度相似导致的 train/test leakage。
+- guest loading、温度、压力、溶剂和水合环境。
 
-因此教程坚持一个原则：**先做物理上可解释的 COF baseline，再决定是否需要更复杂的 GNN。**
+因此教程强调：**先理解材料问题，再决定使用什么 feature 和 model。**
 
 ## 数据
 
-真实 COF 数据来自 [Wanteen/CURATED-COFs](https://github.com/Wanteen/CURATED-COFs)。
+真实 COF 数据部分使用 [Wanteen/CURATED-COFs](https://github.com/Wanteen/CURATED-COFs)。
 
-`data/cof_demo.csv` 仅用于教学。`CO2_uptake_demo` 是人工构造 target，**不得用于科研结论或论文数据**。
+`data/cof_demo.csv` 仅用于教学，其中 `CO2_uptake_demo` 为人工构造 target，不能用于科研结论。
 
-## 推荐外部教材
+## 关于 07：机器学习势（MLFF）
 
-这些资源不是要求从头到尾全部学习，而是作为本教程对应章节的扩展阅读：
+这一章是补充内容。学生只需要知道：
 
-| Resource | 推荐用途 |
-|---|---|
-| [Machine Learning for Materials](https://aronwalsh.github.io/MLforMaterials/) | 系统理解材料 ML、representation、model 与 optimization |
-| [pymatgen](https://pymatgen.org/) | 周期结构与材料数据处理 |
-| [matminer](https://hackingmaterials.lbl.gov/matminer/) | composition / structure featurization |
-| [JARVIS notebooks](https://github.com/atomgptlab/jarvis-tools-notebooks) | Colab 化材料 AI 示例、ALIGNN 与材料数据 |
-| [MatGL tutorials](https://matgl.ai/tutorials.html) | 图神经网络和材料势的官方 notebook |
-| [CHGNet](https://github.com/CederGroupHub/chgnet) | pretrained universal ML potential 入门 |
-| [ALIGNN](https://github.com/usnistgov/alignn) | atomistic line-graph neural network |
-| [Matbench](https://github.com/materialsproject/matbench) | benchmark 与可比较的模型评价思维 |
+- 经典力场速度快，但形式和参数通常是预先规定的；
+- DFT/AIMD 更接近电子结构层面的描述，但计算昂贵；
+- MLFF 尝试用 DFT 数据学习势能面，以更低成本预测 energy / force，并用于结构优化或 MD；
+- 预训练 MLFF 在新 COF 上必须验证适用性。
 
-## 新生完成标准
+**不要求新生掌握 MLFF 训练、主动学习、微调或生产 MD。**
 
-完成后应能够独立回答：
+## 完成 00–05 后的最低目标
 
-1. CIF 如何变成 Python 中的周期结构对象？
-2. feature、label、training/validation/test 分别是什么？
-3. MAE、RMSE、R² 应该怎样解释？
-4. data leakage 为什么会制造虚假的高精度？
-5. random split 为什么可能高估 COF screening 能力？
-6. composition、pore descriptors 与 atomic graph 各自包含什么信息？
-7. 为什么 GNN 不一定自动优于合理的 descriptor baseline？
-8. MLFF 的 energy / force 数据从哪里来？
-9. 为什么 pretrained MLFF 在新 COF 上必须重新验证？
-10. 如何设计一个能够支持科研结论的独立 test set？
+学生应该能解释：
 
-## 下一阶段计划
+1. 一行数据和一列数据在材料 ML 中分别代表什么；
+2. feature 与 target 的区别；
+3. 为什么需要 train/test split；
+4. MAE、RMSE、R² 的基本意义；
+5. CIF 如何表示晶胞和原子坐标；
+6. 为什么 COF 的 `a` 和 `b` 不一定相等；
+7. descriptor 为什么是“材料 → 数字”的桥梁；
+8. 为什么真实数据要检查缺失、重复和单位；
+9. random split 为什么可能高估同系列 COF 的泛化能力；
+10. 为什么模型能运行不等于科研结论可信。
 
-后续适合继续增加四个进阶模块：
+## 外部资源
 
-- `08_pore_descriptors`：从 CIF 批量构建 COF pore/geometric descriptors；
-- `09_cof_screening_project`：真实 COF property/screening workflow；
-- `10_gnn_training`：在标准数据上训练一个完整 GNN，再迁移到 COF；
-- `11_mlff_validation`：DFT reference → force/energy test → fine-tuning / active learning。
-
-最终结课项目建议做成：
-
-**COF CIF → structure cleaning → descriptors → exploratory analysis → baseline → family-aware validation → candidate screening → uncertainty / applicability-domain analysis**
+- [Machine Learning for Materials](https://aronwalsh.github.io/MLforMaterials/)
+- [pymatgen](https://pymatgen.org/)
+- [matminer](https://hackingmaterials.lbl.gov/matminer/)
+- [JARVIS notebooks](https://github.com/atomgptlab/jarvis-tools-notebooks)
+- [MatGL](https://matgl.ai/)
+- [CHGNet](https://github.com/CederGroupHub/chgnet)
+- [Matbench](https://github.com/materialsproject/matbench)
 
 ## Environment
 
-Google Colab 为推荐环境。本地运行可使用：
+推荐直接使用 Google Colab。统一入口：
+
+[Open course start page in Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb)
+
+本地运行：
 
 ```bash
 pip install -r requirements.txt
