@@ -1,31 +1,45 @@
 # COF-ML-Tutorial
 
-A bilingual beginner course on machine learning for covalent organic frameworks, progressing from first regression/classification models to real COF data, CIF parsing, interpretation and screening.
+<p align="center">
+  <img src="https://img.shields.io/badge/Level-Beginner-2ea44f" alt="Beginner">
+  <img src="https://img.shields.io/badge/Field-COF%20%2F%20Materials-blueviolet" alt="COF Materials">
+  <img src="https://img.shields.io/badge/Run-Google%20Colab-F9AB00" alt="Google Colab">
+  <img src="https://img.shields.io/badge/Language-Chinese%20%7C%20English-1f6feb" alt="Bilingual">
+  <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="MIT">
+</p>
 
-Learning path: `Python/data → first regression & classification → CIF → descriptors → cleaning/feature engineering → multiple models → validation/tuning → interpretation → real COF case study → CIF-to-ML → screening → GNN/MLFF`.
+Short tutorials are grouped by **knowledge density and difficulty**. Tutorials inside one knowledge block use A/B/C numbering instead of consuming a full chapter number.
 
-## Course structure
+## Mastery levels
+- 🟢 **Level A · Must master**
+- 🔵 **Level B · Recommended**
+- 🟣 **Level C · Awareness only**
 
-| Chapter | Topic | Focus |
+| Course ID | Level | Topic |
 |---|---|---|
-| 00 | Course map | learning path |
-| 01 | Python & data basics | DataFrame, X/y |
-| 02 | First ML | first regression + classification |
-| 03 | COF structure & CIF | unit cells, PBC, pymatgen, QC |
-| 04 | COF descriptors | composition, crystal, pore, learned features |
-| 05 | Data preparation | cleaning, feature engineering, selection |
-| 06 | Model comparison | multiple regression/classification models |
-| 07 | Validation & tuning | CV, overfitting, leakage, tuning |
-| 08 | Interpretation | correlation, permutation, SHAP |
-| 09 | Real COF case study | real CO₂ adsorption workflow |
-| 10 | CIF → ML | build feature tables from real CIFs |
-| 11 | High-throughput screening | surrogate, ranking, domain checks |
-| 12 | GNN | atomic graphs and learned representations |
-| 13 | MLFF | machine-learned interatomic potentials |
+| 01A | 🟢 | Python & data basics |
+| 01B | 🟢 | First regression + classification |
+| 02A | 🟢 | COF structure & CIF |
+| 02B | 🟢 | COF descriptors |
+| 02C | 🟢 | Data preparation & feature engineering |
+| 03A | 🟢 | Multi-model comparison |
+| 03B | 🟢 | Validation & tuning |
+| 03C | 🟢 | Feature importance & interpretation |
+| 04A | 🟢 | Real COF ML case study |
+| 04B | 🔵 | Real CIF → ML |
+| 04C | 🔵 | High-throughput screening |
+| 05 | 🔵 | GNN |
+| 06 | 🟣 | MLFF |
 
-Public data resources used include COFSpace, CURATED-COFs, CoRE-COF Database and SupportingInformation_CO2captureHTS_2024. `data/cof_demo.csv` is introductory teaching data only; `CO2_uptake_demo` is synthetic.
+Milestones: finish 01 for your first successful ML loop; 02 for ML-ready materials data; 03 for trustworthy model comparison and interpretation; 04 for a complete real COF workflow.
 
-Tutorial developed by Wanteen, Guo Group, Department of Macromolecular Science, Fudan University.  
+Public data include COFSpace, CURATED-COFs, CoRE-COF Database and ReDD-COFFEE CO₂-capture HTS supporting information.
+
+`data/cof_demo.csv` is used only for the low-barrier introductory tutorials. Its `CO2_uptake_demo` target is synthetic and must not be used for scientific conclusions.
+
+## Author
+Tutorial developed by [Wanteen](https://github.com/Wanteen), Guo Group, Department of Macromolecular Science, Fudan University.  
 wantingshieh@gmail.com · wantingshieh@outlook.com
 
+## License
 [MIT License](LICENSE)
