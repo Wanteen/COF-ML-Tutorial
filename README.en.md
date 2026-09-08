@@ -65,11 +65,11 @@ For COFs, the difficult part is often not calling an algorithm. The real questio
 ## 🖼️ COF visual examples
 
 <p align="center">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20chemical%20structure%20of%20the%20DAAQ-TFP%20covalent%20organic%20framework.png" width="320" alt="DAAQ-TFP COF">
-  <img src="https://commons.wikimedia.org/wiki/Special:FilePath/A%20chemical%20structure%20of%20the%20TpOMe-DAQ%20covalent%20organic%20framework.png" width="320" alt="TpOMe-DAQ COF">
+  <img src="assets/cof_hexagonal.svg" width="420" alt="Hexagonal COF pore network">
+  <img src="assets/cof_layered.svg" width="420" alt="Layered COF stacking and transport">
 </p>
 
-<p align="center"><sub>DAAQ-TFP and TpOMe-DAQ COF structural illustrations. Images by Tyran Gunther (UU), Wikimedia Commons, CC BY-SA 4.0. See <a href="docs/visual_resources.md">visual resources and attribution</a>.</sub></p>
+<p align="center"><sub>Repository-hosted teaching illustrations: a 2D hexagonal pore network and a layered COF with pore transport. These are schematic examples for explaining pores, stacking and transport rather than specific experimental structures.</sub></p>
 
 ## 🗓️ Suggested schedule
 
