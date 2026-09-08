@@ -37,6 +37,36 @@ Public data include COFSpace, CURATED-COFs, CoRE-COF Database and ReDD-COFFEE CO
 
 `data/cof_demo.csv` is used only for the low-barrier introductory tutorials. Its `CO2_uptake_demo` target is synthetic and must not be used for scientific conclusions.
 
+## Real COF datasets
+
+| Source | Contents | Teaching use |
+|---|---|---|
+| [CURATED-COFs](https://github.com/danieleongari/CURATED-COFs) + [Materials Cloud](https://archive.materialscloud.org/record/2021.100) | experimentally reported COFs, optimized structures, pore properties and CO₂/N₂ adsorption data | CIF ↔ ID ↔ property, small-data ML, carbon capture |
+| [COFSpace](https://github.com/gokhanonderaksu/COFSpace) | simulated CO₂/CH₄/H₂/N₂/O₂ adsorption for 1060 CoRE COFs, structural/chemical/energy features, plus hypothetical-COF predictions | multi-gas regression, pressure dependence, feature importance, external prediction |
+| [ReDD-COFFEE](https://github.com/jsdvos/SupportingInformation_ReDD-COFFEE_2023) | large hypothetical-COF space, pore geometry and RAC descriptors | representation, diversity and large chemical spaces |
+| [CO₂ capture HTS](https://github.com/jsdvos/SupportingInformation_CO2captureHTS_2024) | ReDD-COFFEE features, GCMC results, fixed train/test splits, ML and SHAP | high-throughput screening, feature reduction and interpretability |
+| [Hypothetical COFs for methane storage](https://www.materialscloud.org/discover/cofs) | 69,840 hypothetical 2D/3D COFs with GCMC methane deliverable capacities | large-scale screening and structure–property relationships |
+
+04A includes the second adsorption dataset; 04B restores the CIF-to-table pipeline; 04C connects screening practice to published results and predictions. Keep dataset conditions and provenance separate.
+
+
+Additional ready-to-read tables: [nachatz/cof-data](https://github.com/nachatz/cof-data) · [properties.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/properties.csv) · [simple_features.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/simple_features.csv)
+
+## Further reading by chapter
+
+| Chapter | Resource | Purpose |
+|---|---|---|
+| 01–04 | [Machine Learning for Materials](https://aronwalsh.github.io/MLforMaterials/) | Materials ML concepts |
+| 02A / 04B | [pymatgen](https://pymatgen.org/) | Cells, CIF and PBC |
+| 02B | [matminer](https://hackingmaterials.lbl.gov/matminer/) | Composition and structure descriptors |
+| 05 | [JARVIS notebooks](https://github.com/atomgptlab/jarvis-tools-notebooks) | Materials graphs and notebooks |
+| 05–06 | [MatGL tutorials](https://matgl.ai/tutorials.html) | Graph models and potentials |
+| 06 | [CHGNet](https://github.com/CederGroupHub/chgnet) | Pretrained potentials and validation |
+| 05 | [ALIGNN](https://github.com/usnistgov/alignn) | Atom and bond-angle graphs |
+| 03B | [Matbench](https://github.com/materialsproject/matbench) | Comparable benchmarks |
+
+[Data contracts and source links](docs/data_resources.md). Cite original papers/data records and record version, units, conditions and splits.
+
 ## Author
 Tutorial developed by [Wanteen](https://github.com/Wanteen), Guo Group, Department of Macromolecular Science, Fudan University.  
 wantingshieh@gmail.com · wantingshieh@outlook.com
