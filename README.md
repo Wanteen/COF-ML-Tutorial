@@ -14,6 +14,14 @@
 
 面向 COF / 计算材料方向机器学习初学者。课程按**知识密度与难度**划分主章节，同一知识块中的短教程使用 `A/B/C` 编号，而不是每个短教程占一个完整章节号。
 
+## 快速上手
+
+1. 打开 [中文 Colab 入口](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb) 或 [English Colab 入口](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/00_start_here_colab.ipynb)，无需本地安装。
+2. 先看 [课程说明](notebooks/00_course_map.ipynb)，再完成 **01A → 01B**，跑通第一次回归与分类。
+3. 连接运行时，从上到下运行单元格；下方每节课均提供中英文 Colab 链接。
+4. 继续按 **02A–02C → 03A–03C → 04A** 学习；04B–04C 和 05 为建议掌握的扩展，06 为选读背景。
+5. [双语课程索引](notebooks/README.md) 收录全部课程。笔记本文件名、正文标题与表格使用同一课程编号。
+
 ## 掌握度分级
 
 - 🟢 **Level A · 必须掌握**：完成 COF 机器学习基础训练所需。
@@ -24,21 +32,21 @@
 
 `01 快速入门 → 02 COF 数据与特征 → 03 经典机器学习 → 04 真实 COF 科研工作流 → 05 GNN → 06 MLFF`
 
-| Course ID | Level | Topic | 核心目标 | Notebook |
-|---|---|---|---|---|
-| 01A | 🟢 | Python & data basics | DataFrame、feature、target、X/y | [中文](notebooks/01_python_ml_basics.ipynb) |
-| 01B | 🟢 | First ML | 第一次回归 + 分类，建立阶段性成就感 | [中文](notebooks/02_first_ml_regression_classification.ipynb) |
-| 02A | 🟢 | COF structure & CIF | 晶胞、PBC、pymatgen、结构 QC | [中文](notebooks/03_cof_structure_cif.ipynb) |
-| 02B | 🟢 | COF descriptors | composition / crystal / pore descriptors | [中文](notebooks/04_cof_descriptors.ipynb) |
-| 02C | 🟢 | Data preparation | 清洗、特征构造、选择与 scaling | [中文](notebooks/05_data_preparation_feature_engineering.ipynb) |
-| 03A | 🟢 | Model comparison | 多种回归与分类模型比较 | [中文](notebooks/06_model_comparison.ipynb) |
-| 03B | 🟢 | Validation & tuning | CV、overfitting、leakage、调参 | [中文](notebooks/07_validation_tuning.ipynb) |
-| 03C | 🟢 | Interpretation | correlation、permutation、SHAP | [中文](notebooks/08_feature_importance_interpretation.ipynb) |
-| 04A | 🟢 | Real COF case study | 真实 CO₂ adsorption 综合项目 | [中文](notebooks/09_real_cof_ml_case_study.ipynb) |
-| 04B | 🔵 | CIF → ML | 真实 CIF 自动构建 ML table | [中文](notebooks/10_real_cif_to_ml.ipynb) |
-| 04C | 🔵 | High-throughput screening | candidate ranking、适用域、验证 | [中文](notebooks/11_high_throughput_screening.ipynb) |
-| 05 | 🔵 | GNN | atomic graph 与 learned representation | [中文](notebooks/12_gnn_for_cofs.ipynb) |
-| 06 | 🟣 | MLFF | 机器学习势与原子模拟 | [中文](notebooks/13_mlff.ipynb) |
+| Course ID | Level | Topic | 核心目标 | Notebook | 中文 Colab | English Colab |
+|---|---|---|---|---|---|---|
+| 01A | 🟢 | Python & data basics | DataFrame、feature、target、X/y | [中文](notebooks/01A_python_ml_basics.ipynb) / [English](notebooks/en/01A_python_ml_basics.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01A_python_ml_basics.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/01A_python_ml_basics.ipynb) |
+| 01B | 🟢 | First ML | 第一次回归 + 分类，建立阶段性成就感 | [中文](notebooks/01B_first_ml_regression_classification.ipynb) / [English](notebooks/en/01B_first_ml_regression_classification.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/01B_first_ml_regression_classification.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/01B_first_ml_regression_classification.ipynb) |
+| 02A | 🟢 | COF structure & CIF | 晶胞、PBC、pymatgen、结构 QC | [中文](notebooks/02A_cof_structure_cif.ipynb) / [English](notebooks/en/02A_cof_structure_cif.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02A_cof_structure_cif.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02A_cof_structure_cif.ipynb) |
+| 02B | 🟢 | COF descriptors | composition / crystal / pore descriptors | [中文](notebooks/02B_cof_descriptors.ipynb) / [English](notebooks/en/02B_cof_descriptors.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02B_cof_descriptors.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02B_cof_descriptors.ipynb) |
+| 02C | 🟢 | Data preparation | 清洗、特征构造、选择与 scaling | [中文](notebooks/02C_data_preparation_feature_engineering.ipynb) / [English](notebooks/en/02C_data_preparation_feature_engineering.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/02C_data_preparation_feature_engineering.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/02C_data_preparation_feature_engineering.ipynb) |
+| 03A | 🟢 | Model comparison | 多种回归与分类模型比较 | [中文](notebooks/03A_model_comparison.ipynb) / [English](notebooks/en/03A_model_comparison.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03A_model_comparison.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03A_model_comparison.ipynb) |
+| 03B | 🟢 | Validation & tuning | CV、overfitting、leakage、调参 | [中文](notebooks/03B_validation_tuning.ipynb) / [English](notebooks/en/03B_validation_tuning.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03B_validation_tuning.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03B_validation_tuning.ipynb) |
+| 03C | 🟢 | Interpretation | correlation、permutation、SHAP | [中文](notebooks/03C_feature_importance_interpretation.ipynb) / [English](notebooks/en/03C_feature_importance_interpretation.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/03C_feature_importance_interpretation.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/03C_feature_importance_interpretation.ipynb) |
+| 04A | 🟢 | Real COF case study | 真实 CO₂ adsorption 综合项目 | [中文](notebooks/04A_real_cof_ml_case_study.ipynb) / [English](notebooks/en/04A_real_cof_ml_case_study.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04A_real_cof_ml_case_study.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04A_real_cof_ml_case_study.ipynb) |
+| 04B | 🔵 | CIF → ML | 真实 CIF 自动构建 ML table | [中文](notebooks/04B_real_cif_to_ml.ipynb) / [English](notebooks/en/04B_real_cif_to_ml.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04B_real_cif_to_ml.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04B_real_cif_to_ml.ipynb) |
+| 04C | 🔵 | High-throughput screening | candidate ranking、适用域、验证 | [中文](notebooks/04C_high_throughput_screening.ipynb) / [English](notebooks/en/04C_high_throughput_screening.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/04C_high_throughput_screening.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/04C_high_throughput_screening.ipynb) |
+| 05 | 🔵 | GNN | atomic graph 与 learned representation | [中文](notebooks/05_gnn_for_cofs.ipynb) / [English](notebooks/en/05_gnn_for_cofs.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/05_gnn_for_cofs.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/05_gnn_for_cofs.ipynb) |
+| 06 | 🟣 | MLFF | 机器学习势与原子模拟 | [中文](notebooks/06_mlff.ipynb) / [English](notebooks/en/06_mlff.ipynb) | [中文 Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/06_mlff.ipynb) | [English Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/en/06_mlff.ipynb) |
 
 ## 阶段性完成感
 
@@ -96,6 +104,7 @@ COF 是由有机构筑单元通过共价键形成的晶态多孔网络。连接�
 
 **教程开发:** [Wanteen](https://github.com/Wanteen)  
 **所属:** 复旦大学高分子科学系 · 郭佳课题组  
+**Affiliation:** Guo Group, Department of Macromolecular Science, Fudan University<br>
 wantingshieh@gmail.com · wantingshieh@outlook.com
 
 ## License
