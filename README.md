@@ -8,31 +8,32 @@
   <img src="https://img.shields.io/badge/License-MIT-lightgrey" alt="MIT">
 </p>
 
-<p align="center"><b>从 COF 结构与材料数据出发，循序渐进理解机器学习。</b><br>
-<b>Learn machine learning step by step from COF structures and materials data.</b></p>
+<p align="center"><b>从 COF 结构与材料数据出发，循序渐进理解机器学习。</b><br><b>Learn machine learning step by step from COF structures and materials data.</b></p>
 
-<p align="center">
-  <a href="README.md">🇨🇳 中文</a> ·
-  <a href="README.en.md">🇬🇧 English</a> ·
-  <a href="https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb">▶ Open in Colab</a>
-</p>
+<p align="center"><b>复旦大学高分子科学系 · 郭佳课题组</b><br>Guo Group, Department of Polymer Science, Fudan University<br><sub>教程开发：Wanteen · Tutorial developed by Wanteen</sub></p>
+
+<p align="center"><a href="README.md">🇨🇳 中文</a> · <a href="README.en.md">🇬🇧 English</a> · <a href="https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb">▶ Open in Colab</a></p>
 
 ---
 
 > 面向 **COF / 计算材料方向新入学研究生** 的机器学习入门教程。  
 > **GitHub 阅读 + Google Colab 运行 + COF 数据实践。**
 
-本教程不是机器学习专业课程，也不要求学生一开始就理解复杂模型。核心目标是：先建立最基本的数据与模型概念，再逐步连接到 COF 结构、描述符、性质预测和科研中的验证问题。
+## 🧱 COF 是什么？
 
-## 🎯 课程定位
+**共价有机框架（Covalent Organic Frameworks, COFs）** 是由有机分子构筑单元通过共价键连接形成的周期性多孔晶态材料。可以把它们初步理解为：研究者选择具有特定连接方式的 **node / building unit（节点/构筑单元）** 与 **linker（连接单元）**，通过有机反应构筑具有规则孔道的二维或三维网络。
 
-适合：刚进入 COF / 计算材料课题组、没有系统学习过机器学习、能看懂基础 Python 代码、并具备基本 COF / 物理化学知识的研究生。
+COF 的组成、连接键、拓扑、孔径、官能团以及二维材料的层间堆积方式都可以改变材料性质，因此 COF 很适合作为材料信息学和机器学习的教学对象。本教程会逐渐把“化学结构”转化成“机器学习可以处理的数据”，但不会替代系统的 COF 化学、晶体学或高分子科学课程。
 
-**Python 前置要求：** 能看懂变量、list/dict、函数调用、`for` 循环、`import`、DataFrame 等基本代码结构即可，不要求熟练编程。
+## 🎯 课程定位与前置要求
 
-**COF / 材料前置要求：** 理解原子、化学键、晶胞、周期性结构、孔道、密度、吸附等基本物理化学概念。
+本教程适合刚进入 COF / 计算材料研究、没有系统学习过机器学习的本科高年级学生或研究生。
 
-**机器学习前置要求：** 无。
+**Python：** 能看懂变量、list/dict、函数调用、`for` 循环、`import`、DataFrame 等基本代码结构即可，不要求熟练编程。
+
+**COF / 材料：** 建议具备基础化学和物理化学知识，并理解原子、化学键、晶胞、周期性结构、孔道、密度、吸附等基本概念。不了解 COF 的学生应先阅读上面的“COF 是什么？”以及 00/02 章节。
+
+**机器学习：** 无前置要求。
 
 ## 🧭 学习层级
 
@@ -66,16 +67,13 @@ flowchart LR
     E --> F[🔬 Scientific interpretation]
 ```
 
-对于 COF，真正困难的通常不是调用算法，而是输入是否包含孔径、孔隙率、化学组成、官能团、拓扑、层间堆积等重要信息；target 是否来自一致条件；以及 train/test 是否真正代表“已知”和“未知”材料。
-
 ## 🖼️ COF 结构示意
 
-<p align="center">
-  <img src="assets/cof_hexagonal.svg" width="420" alt="Hexagonal COF pore network">
-  <img src="assets/cof_layered.svg" width="420" alt="Layered COF stacking and transport">
-</p>
+<p align="center"><img src="assets/cof_hexagonal.svg" width="420" alt="Hexagonal COF pore"><img src="assets/cof_layered.svg" width="420" alt="Layered COF stacking"></p>
 
-<p align="center"><sub>仓库内置教学示意图：左图展示二维六方孔道网络，右图展示层间堆积与孔道输运。它们用于解释 COF 的 pore、stacking 与 transport 概念，不对应某一个具体实验结构。</sub></p>
+<p align="center"><sub>左：修正后的单个二维六方孔拓扑示意，只用于解释 node–linker–pore 关系；右：层状 COF 的 stacking / transport 教学示意。示意图不对应具体实验结构。</sub></p>
+
+> **实验结构素材：** 本教程还将使用作者本人绘制的 TpBD / TpAZ / TpDAAQ / TpBpy / TpPhen 等 COF 构筑单元与孔道结构图。原始科研图片属于课题组素材，发布到公开仓库前保留作者标注并采用仓库内文件，避免外部热链。
 
 ## 🗓️ 推荐学习顺序
 
@@ -89,13 +87,7 @@ flowchart LR
 
 ## 🧪 数据
 
-真实 COF 数据部分使用 [Wanteen/CURATED-COFs](https://github.com/Wanteen/CURATED-COFs)。
-
-`data/cof_demo.csv` 仅用于教学，其中 `CO2_uptake_demo` 为人工构造 target，不能用于科研结论。
-
-## ✅ 完成 00–05 后的最低目标
-
-学生应能解释：feature 与 target 的区别；为什么需要 train/test split；MAE/RMSE/R² 的基本意义；CIF 如何表示晶胞与原子；为什么 COF 的 `a` 和 `b` 不一定相等；descriptor 为什么是“材料 → 数字”的桥梁；为什么真实数据要检查缺失、重复、单位和实验条件；以及为什么 random split 可能高估同系列 COF 的泛化能力。
+真实 COF 数据部分使用 [Wanteen/CURATED-COFs](https://github.com/Wanteen/CURATED-COFs)。`data/cof_demo.csv` 仅用于教学，其中 `CO2_uptake_demo` 为人工构造 target，不能用于科研结论。
 
 ## 📖 外部资源
 
@@ -110,15 +102,14 @@ flowchart LR
 
 ## 🚀 Environment
 
-推荐直接使用 Google Colab：
+推荐直接使用 Google Colab：[▶ Open course start page in Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb)
 
-[▶ Open course start page in Colab](https://colab.research.google.com/github/Wanteen/COF-ML-Tutorial/blob/main/notebooks/00_start_here_colab.ipynb)
+本地运行：`pip install -r requirements.txt`
 
-本地运行：
+## 👥 Project attribution
 
-```bash
-pip install -r requirements.txt
-```
+**所属 / Affiliation:** 复旦大学高分子科学系郭佳课题组（Guo Group, Department of Polymer Science, Fudan University）  
+**教程开发 / Tutorial developer:** Wanteen
 
 ## 📄 License
 
