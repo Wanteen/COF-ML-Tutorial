@@ -80,7 +80,6 @@ COF 是由有机构筑单元通过共价键形成的晶态多孔网络。连接�
 | [CO₂ capture HTS](https://github.com/jsdvos/SupportingInformation_CO2captureHTS_2024) | ReDD-COFFEE 的 features、GCMC results、固定 train/test split、ML 与 SHAP | high-throughput screening、feature reduction、interpretability |
 | [Hypothetical COFs for methane storage](https://www.materialscloud.org/discover/cofs) | 69,840 个 hypothetical 2D/3D COF 与 GCMC methane deliverable capacity | 大规模 screening、structure–property relationship |
 
-04A 补回第二套吸附数据实验，04B 恢复 CIF 到表格的完整实践，04C 连接筛选机制与公开 results/predictions。不同来源先分别建立数据卡，再讨论能否合并。
 
 
 可直接读取的补充表：[nachatz/cof-data](https://github.com/nachatz/cof-data) · [properties.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/properties.csv) · [simple_features.csv](https://raw.githubusercontent.com/nachatz/cof-data/main/simple_features.csv)
